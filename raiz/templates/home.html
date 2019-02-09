@@ -1,0 +1,49 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Que a força esteja com todos nós" />
+    <title>Me contrata</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+            <a class="pure-menu-heading" href="">JERA</a>
+            <ul>
+                <li class="pure-menu-selected"><a href="{% url 'home' %}">Início</a></li>
+                <li><a href="{% url 'cadastrar' %}">Cadastrar livro</a></li>
+                <li><a href="{% url 'lembrete' %}">Adicionar lembrete</a></li>
+                <li><a href="{% url 'listagem' %}">listagem dos livros</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="splash">
+        <div class="pure-g-r">
+            <div class="pure-u-1">
+                <div class="l-box splash-text">
+                    <h1 class="splash-head">
+                        Receba uma notificação para lembrar-lo
+                    </h1>
+                    <h2 class="splash-subhead">
+                        Cadastre todos seus livros e receba notificações, pré estabelecidas, por você para lembrar-lo de ler.
+                    </h2>
+                    <p>
+                        <a href="{% url 'cadastrar' %}" class="pure-button primary-button">Cadastrar um Livro</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Me contrata
+    </div>
+</div>
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+</body>
+</html>
