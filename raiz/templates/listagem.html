@@ -39,19 +39,17 @@
             <div class="l-box">
                 <a href="{{ livro.get_absolute_url }}">
                 {% if livro.image %}
-                <img src="{{ livro.image.url }}" alt="{{ livro.name }}" />
+                <img src="{{ livro.image.url }}" alt="{{ livro.name }}" alt="{{ livro.num }}" />
+                <table><h3>{{ livro.name }} {{ livro.num }}</h3></table>
+
                 {% else %}
-                <img src="{% static 'livro.image' %}" alt="{{ livro.name }}" />
+                <img src="{% static 'livro.image' %}" alt="{{ livro.name }}" alt="{{ livro.num }}" />
+                <table><h3>{{ livro.name }} {{ livro.num }}</h3></table>
                 {% endif %}
                 </a>
             </div>
         </div>
-        <div class="pure-u-2-3">
-            <div class="l-box">
-                <h4 class="content-subhead"><a href="{{ course.get_absolute_url }}" title="">{{ livro.name }}</a></h4>
-                {{ course.description|linebreaks }}
-            </div>
-        </div>
+
     </div>
     {% empty %}
     <div class="pure-g-r content-ribbon">

@@ -9,3 +9,9 @@ class Livro(models.Model):
     image = models.ImageField(upload_to='livros/image', verbose_name='Imagem',
      null=True, blank=True
      )
+
+
+class Lembrete(models.Model):
+    #name = models.CharField('Nome', max_length=100)
+    data = models.DateTimeField()
+    #data_criacao = models.DateTimeField('data_criacao', auto_now_add=True)

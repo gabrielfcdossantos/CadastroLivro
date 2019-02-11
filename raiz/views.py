@@ -4,14 +4,29 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Livro
 from .forms import CadastroLivro
+from .forms import CadastroLembrete
 
 
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
 
+
+
+
+
 def lembrete(request):
-    return render(request, 'lembrete.html')
+    template_name = 'lembrete.html'
+    form = CadastroLembrete(request.POST or None)
+    context = {
+        'form': form
+    }
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+
+    return render(request, template_name, context)
 
 
 
