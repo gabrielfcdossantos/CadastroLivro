@@ -13,12 +13,35 @@ def home(request):
 def lembrete(request):
     return render(request, 'lembrete.html')
 
+
+
+
+
+
 def cadastrar(request):
-    context = {
-        'form': CadastroLivro()
-    }
+
     template_name = 'cadastrar.html'
+
+    form = CadastroLivro(request.POST or None)
+    context = {
+        'form': form
+    }
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+        #    l = Livro()
+        #    l = request.POST
+
+            #import pdb; pdb.set_trace()
+
     return render(request, template_name, context)
+
+
+
+
+
+
 
 def listagem(request):
     livros = Livro.objects.all()

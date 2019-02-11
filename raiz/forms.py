@@ -1,6 +1,8 @@
 from django import forms
+from .models import Livro
 
-class CadastroLivro(forms.Form):
+class CadastroLivro(forms.ModelForm):
 
-    name = forms.CharField(label='Nome', max_length=100)
-    numpaginas = forms.IntegerField(label='Numero de Paginas')
+    class Meta:
+        model = Livro
+        fields = ( 'name', 'num')

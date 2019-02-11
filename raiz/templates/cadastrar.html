@@ -27,27 +27,33 @@
 
 
     <div class="splash">
-      <form class="pure-form pure-form-aligned">
+      <form class="pure-form pure-form-aligned" method="POST">
     <fieldset>
       <table>
         <h1></h1>
         <h1></h1>
           <tbody>
+            {% csrf_token %}
             {{ form.as_table }}
+              <button type="submit" class="pure-button pure-button-primary">Cadastar</button>
 
           </tbody>
 
 
       </table>
 
-            <button type="submit" class="pure-button pure-button-primary">Cadastar</button>
+
 
         </div>
     </fieldset>
 </form>
-    </div>
 
 
+</div>
+
+{% if name %}
+  <h2>Olá: {{ name }}</h2>
+{% endif %}
 
 
 
