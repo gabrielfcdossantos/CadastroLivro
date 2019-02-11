@@ -23,23 +23,25 @@
           </div>
       </div>
     </div>
+    <h1></h1>
+
+
     <div class="splash">
       <form class="pure-form pure-form-aligned">
     <fieldset>
-        <div class="pure-control-group">
-            <label for="name">Nome do Livro</label>
-            <input id="name" type="text" placeholder="Nome do Livro">
+      <table>
+        <h1></h1>
+        <h1></h1>
+          <tbody>
+            {{ form.as_table }}
 
-        </div>
-
-        <div class="pure-control-group">
-            <label for="number">Numero de Paginas</label>
-            <input id="number" type="number" placeholder="Numero de Paginas">
-        </div>
+          </tbody>
 
 
+      </table>
 
             <button type="submit" class="pure-button pure-button-primary">Cadastar</button>
+
         </div>
     </fieldset>
 </form>
