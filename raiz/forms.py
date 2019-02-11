@@ -12,4 +12,4 @@ class CadastroLembrete(forms.ModelForm):
 
     class Meta:
         model = Lembrete
-        fields = ('data',)
+        fields = ('data','livro')

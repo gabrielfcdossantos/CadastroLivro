@@ -12,6 +12,8 @@ class Livro(models.Model):
 
 
 class Lembrete(models.Model):
+
     #name = models.CharField('Nome', max_length=100)
     data = models.DateTimeField()
     #data_criacao = models.DateTimeField('data_criacao', auto_now_add=True)
+    livro = models.ForeignKey(Livro, on_delete = models.CASCADE)

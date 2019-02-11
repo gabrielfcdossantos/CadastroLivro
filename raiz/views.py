@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Livro
+from .models import Lembrete
 from .forms import CadastroLivro
 from .forms import CadastroLembrete
 

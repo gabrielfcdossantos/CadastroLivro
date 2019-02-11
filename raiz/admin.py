@@ -12,7 +12,7 @@ class LivroAdmin(admin.ModelAdmin):
 
 class LembreteAdmin(admin.ModelAdmin):
 
-    list_display = ['data']
+    list_display = ['data', 'livro']
 
 
 
